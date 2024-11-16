@@ -13,7 +13,7 @@ public class AccountsController {
 
     @GetMapping
     public Map<String, String> accounts() {
-        // ... business logic
+        //... business logic
         return Collections.singletonMap("msj", "accounts");
     }
 }

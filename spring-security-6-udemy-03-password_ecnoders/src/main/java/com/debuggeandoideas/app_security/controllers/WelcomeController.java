@@ -8,12 +8,11 @@ import java.util.Collections;
 import java.util.Map;
 
 @RestController
-@RequestMapping(path = "/accounts")
-public class AccountsController {
+@RequestMapping(path = "/welcome")
+public class WelcomeController {
 
     @GetMapping
-    public Map<String, String> accounts() {
-        // ... business logic
-        return Collections.singletonMap("msj", "accounts");
+    public Map<String, String> welcome() {
+        return Collections.singletonMap("msj", "welcome");
     }
 }
