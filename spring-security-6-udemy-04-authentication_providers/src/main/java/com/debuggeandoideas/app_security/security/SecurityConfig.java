@@ -82,9 +82,9 @@ public class SecurityConfig {
     @Bean
     PasswordEncoder passwordEncoder() {
         // En este caso, usa un codificador que no realiza ningún cifrado (NoOp).
-        // return NoOpPasswordEncoder.getInstance();
+        return NoOpPasswordEncoder.getInstance();
 
         // Configura BCrypt como el codificador de contraseñas.
-        return new BCryptPasswordEncoder();
+        // return new BCryptPasswordEncoder();
     }
 }
