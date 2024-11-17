@@ -1,4 +1,4 @@
-# SECCION 6
+# SECCION 7
 
 # 1. Crea la base de datos "db_security_bank" de manera manual en PostgreSQL
 
@@ -32,6 +32,25 @@ insert into roles(role_name, description, id_customer) values
                                                            ('ROLE_USER', 'cant view loans endpoint', 3),
                                                            ('ROLE_USER', 'cant view balance endpoint', 4);
 
+
 # Las contraseñas no estan encriptadas
 
 # 3. Accede a un endpoint de la aplicación en el navegador e inicia sesión con el usuario registrado en la tabla customers
+
+# 4. Inicia sesion en la aplicacion, ve al endpoint /login
+
+# 5. Aparecera una pagina web de error 500. Introduce el siguiente Script de JS en la consola de chrome
+
+/*
+fetch('http://localhost:8080/loans', {
+    method: 'GET',
+    headers: {
+        'api_key': 'myKey'
+    }
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.log(error));
+*/
+
+6. Pulsa enter y se imprimira en la consola el objeto que retorna el endpoint, debes asegurarte que el usuario que ha iniciado sesion en el navegador, tenga el rol adecuado para que pueda acceder al endpoint
