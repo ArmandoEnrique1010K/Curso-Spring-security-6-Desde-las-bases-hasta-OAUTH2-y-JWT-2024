@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "000ec3fd-5313-4372-8bbb-f248059bef01",
+		"name": "Sección 9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35943406"
+	},
+	"item": [
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/welcome",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(No Authenticate)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/balance",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"account@debuggeandoieas.com\",\r\n    \"password\": \"to_be_encoded\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cards",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJST0xFUyI6IltST0xFX0FETUlOXSIsInN1YiI6ImFjY291bnRAZGVidWdnZWFuZG9pZWFzLmNvbSIsImlhdCI6MTczMTgyMjcyMywiZXhwIjoxNzMxODQwNzIzfQ.6slV_rrR64JKfRMB791k2KwwU5CnTF6lZBXaoq45uKc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cards",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJST0xFUyI6IltST0xFX0FETUlOXSIsInN1YiI6ImFjY291bnRAZGVidWdnZWFuZG9pZWFzLmNvbSIsImlhdCI6MTczMTgyMTk5NywiZXhwIjoxNzMxODM5OTk3fQ.NCNwjl6YG8EsYFrz_9DUhu6XvhenAaC9qw_4MbVLq5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/balance",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
