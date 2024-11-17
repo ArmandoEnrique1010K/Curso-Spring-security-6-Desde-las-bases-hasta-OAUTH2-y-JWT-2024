@@ -53,4 +53,5 @@ fetch('http://localhost:8080/loans', {
 .catch(error => console.log(error));
 */
 
+# https://github.com/davidarroyo1234/InstagramUnfollowers/issues/150
 6. Pulsa enter y se imprimira en la consola el objeto que retorna el endpoint, debes asegurarte que el usuario que ha iniciado sesion en el navegador, tenga el rol adecuado para que pueda acceder al endpoint
